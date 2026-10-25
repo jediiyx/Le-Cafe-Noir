@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0907" />
+    <meta
+      name="description"
+      content="Le Cafe Noir online order menu with signature coffees, pastries, and cafe favorites."
+    />
+    <title>Le Cafe Noir</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="page-header">
+        <button class="cart-button" id="cart-trigger" aria-label="Open order cart">
+          Cart <span id="cart-badge">0</span>
+        </button>
+
+        <div class="brand-badge" aria-label="Le Cafe Noir logo">
+          <img src="cafelogo.png" alt="Le Cafe Noir logo" class="brand-logo" />
+        </div>
+      </header>
+
+      <main class="menu-board" id="menu">
+        <div class="section-header">OUR SIGNATURE FAVORITES</div>
+
+        <section class="hero-merch" aria-label="Featured drinks">
+          <article class="feature-product">
+            <div class="feature-photo" style="background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="feature-meta">
+              <span class="feature-label">CONCIERGE'S CHOICE</span>
+              <h3>CARAMEL LATTE</h3>
+              <div class="feature-price">₱150</div>
+            </div>
+            <div class="temp-choice">
+              <label for="temp-caramel-latte">Serve</label>
+              <select id="temp-caramel-latte" class="temp-select" data-product-id="caramel-latte">
+                <option value="Hot">Hot</option>
+                <option value="Cold">Cold</option>
+              </select>
+            </div>
+            <div class="product-actions">
+              <button class="order-button" data-order="caramel-latte">Order Now</button>
+              <button class="mini-add" data-add="caramel-latte">Add to Cart</button>
+            </div>
+          </article>
+
+          <article class="feature-product">
+            <div class="feature-photo" style="background-image: url('https://images.unsplash.com/photo-1497636577773-f1231844b336?auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="feature-meta">
+              <span class="feature-label">BUTLER'S RESERVE</span>
+              <h3>SPANISH LATTE</h3>
+              <div class="feature-price">₱110</div>
+            </div>
+            <div class="temp-choice">
+              <label for="temp-spanish-latte">Serve</label>
+              <select id="temp-spanish-latte" class="temp-select" data-product-id="spanish-latte">
+                <option value="Hot">Hot</option>
+                <option value="Cold">Cold</option>
+              </select>
+            </div>
+            <div class="product-actions">
+              <button class="order-button" data-order="spanish-latte">Order Now</button>
+              <button class="mini-add" data-add="spanish-latte">Add to Cart</button>
+            </div>
+          </article>
+
+          <article class="feature-product">
+            <div class="feature-photo" style="background-image: url('chocolate.jpg');"></div>
+            <div class="feature-meta">
+              <span class="feature-label">CASA MANILA</span>
+              <h3>CHOCOLATE</h3>
+              <div class="feature-price">₱100</div>
+            </div>
+            <div class="temp-choice">
+              <label for="temp-hot-chocolate">Serve</label>
+              <select id="temp-hot-chocolate" class="temp-select" data-product-id="hot-chocolate">
+                <option value="Hot">Hot</option>
+                <option value="Cold">Cold</option>
+              </select>
+            </div>
+            <div class="product-actions">
+              <button class="order-button" data-order="hot-chocolate">Order Now</button>
+              <button class="mini-add" data-add="hot-chocolate">Add to Cart</button>
+            </div>
+          </article>
+        </section>
+
+        <section class="menu-columns">
+          <div class="menu-column">
+            <div class="menu-heading"><span>☕</span> COFFEE</div>
+            <div class="menu-item" data-id="bellmans-boost">
+              <div class="item-name">BELLMAN'S BOOST – AMERICANO</div>
+              <div class="item-price">₱70</div>
+              <p>A bold Americano blending rich espresso with smooth water for a clean, full-bodied taste.</p>
+              <div class="temp-choice menu-temp-choice">
+                <label for="temp-bellmans-boost">Serve</label>
+                <select id="temp-bellmans-boost" class="temp-select" data-product-id="bellmans-boost">
+                  <option value="Hot">Hot</option>
+                  <option value="Cold">Cold</option>
+                </select>
+              </div>
+              <div class="product-actions">
+                <button class="order-button" data-order="bellmans-boost">Order Now</button>
+                <button class="add-button" data-add="bellmans-boost">Add to Cart</button>
+              </div>
+            </div>
+            <div class="menu-item" data-id="first-welcome">
+              <div class="item-name">FIRST WELCOME – ESPRESSO</div>
+              <div class="item-price">₱40</div>
+              <p>A rich and aromatic espresso shot, perfectly crafted for a smooth, satisfying start.</p>
+              <div class="temp-choice menu-temp-choice">
+                <label for="temp-first-welcome">Serve</label>
+                <select id="temp-first-welcome" class="temp-select" data-product-id="first-welcome">
+                  <option value="Hot">Hot</option>
+                  <option value="Cold">Cold</option>
+                </select>
+              </div>
+              <div class="product-actions">
+                <button class="order-button" data-order="first-welcome">Order Now</button>
+                <button class="add-button" data-add="first-welcome">Add to Cart</button>
+              </div>
+            </div>
+
+            <div class="menu-heading sub-heading"><span>✦</span> NON COFFEE</div>
+            <div class="menu-item" data-id="heritage-refresher">
+              <div class="item-name">HERITAGE REFRESHER – MANGO JUICE</div>
+              <div class="item-price">₱80</div>
+              <p>A bright and refreshing mango juice blended with tropical fruit and sparkling citrus notes.</p>
+              <div class="product-actions">
+                <button class="order-button" data-order="heritage-refresher">Order Now</button>
+                <button class="add-button" data-add="heritage-refresher">Add to Cart</button>
+              </div>
+            </div>
+            <div class="menu-item" data-id="luneta-jade">
+              <div class="item-name">LUNETA JADE – MATCHA LATTE</div>
+              <div class="item-price">₱80</div>
+              <p>A smooth and creamy matcha latte with earthy green tea notes and a silky finish.</p>
+              <div class="temp-choice menu-temp-choice">
+                <label for="temp-luneta-jade">Serve</label>
+                <select id="temp-luneta-jade" class="temp-select" data-product-id="luneta-jade">
+                  <option value="Hot">Hot</option>
+                  <option value="Cold">Cold</option>
+                </select>
+              </div>
+              <div class="product-actions">
+                <button class="order-button" data-order="luneta-jade">Order Now</button>
+                <button class="add-button" data-add="luneta-jade">Add to Cart</button>
+              </div>
+            </div>
+            <div class="menu-item" data-id="bay-sunrise">
+              <div class="item-name">BAY SUNRISE – FRUIT DRINK</div>
+              <div class="item-price">₱60</div>
+              <p>A vibrant fruit drink with refreshing citrus and tropical sweetness for a bright start.</p>
+              <div class="product-actions">
+                <button class="order-button" data-order="bay-sunrise">Order Now</button>
+                <button class="add-button" data-add="bay-sunrise">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-column">
+            <div class="menu-heading"><span>🥐</span> PASTRIES</div>
+            <div class="menu-item" data-id="courtyard-cookie">
+              <div class="item-name">COURTYARD COOKIE</div>
+              <div class="item-price">₱50</div>
+              <p>A freshly baked cookie with crisp edges, a soft chewy center, and rich chocolate chips.</p>
+              <div class="product-actions">
+                <button class="order-button" data-order="courtyard-cookie">Order Now</button>
+                <button class="add-button" data-add="courtyard-cookie">Add to Cart</button>
+              </div>
+            </div>
+            <div class="menu-item" data-id="grand-manila-ensaymada">
+              <div class="item-name">GRAND MANILA ENSAYMADA</div>
+              <div class="item-price">₱60</div>
+              <p>A soft, buttery Filipino brioche topped with creamy butter, sugar, and a light cheese finish.</p>
+              <div class="product-actions">
+                <button class="order-button" data-order="grand-manila-ensaymada">Order Now</button>
+                <button class="add-button" data-add="grand-manila-ensaymada">Add to Cart</button>
+              </div>
+            </div>
+            <div class="menu-item" data-id="penthouse-cheesecake">
+              <div class="item-name">PENTHOUSE CHEESECAKE</div>
+              <div class="item-price">₱80</div>
+              <p>A rich cheesecake with a creamy finish and buttery graham crust for a luxurious bite.</p>
+              <div class="product-actions">
+                <button class="order-button" data-order="penthouse-cheesecake">Order Now</button>
+                <button class="add-button" data-add="penthouse-cheesecake">Add to Cart</button>
+              </div>
+            </div>
+            <div class="menu-item" data-id="strawberry-garden-danish">
+              <div class="item-name">STRAWBERRY GARDEN DANISH</div>
+              <div class="item-price">₱110</div>
+              <p>A light, flaky Danish pastry filled with sweet fruit and creamy custard.</p>
+              <div class="product-actions">
+                <button class="order-button" data-order="strawberry-garden-danish">Order Now</button>
+                <button class="add-button" data-add="strawberry-garden-danish">Add to Cart</button>
+              </div>
+            </div>
+            <div class="menu-item" data-id="sunrise-butter-croissant">
+              <div class="item-name">SUNRISE BUTTER CROISSANT</div>
+              <div class="item-price">₱85</div>
+              <p>A golden, buttery croissant with crisp layers and a soft, airy center.</p>
+              <div class="product-actions">
+                <button class="order-button" data-order="sunrise-butter-croissant">Order Now</button>
+                <button class="add-button" data-add="sunrise-butter-croissant">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-column">
+            <div class="menu-heading"><span>✦</span> ABOUT LE CAFÉ NOIR</div>
+            <p class="about-copy">
+              We chose the theme inspired by Old Manila and its timeless elegance, with Le Café Noir located beside the historic Manila Hotel.
+              This place holds a special place in our city’s history—a symbol of heritage, culture, and the golden age of hospitality.
+            </p>
+            <p class="about-copy small">
+              Being beside Manila Hotel allows us to be part of a legacy that celebrates craftsmanship, art, and memorable moments.
+            </p>
+            <div class="survey-section">
+              <div class="qr-block">
+                <img src="SURVEY.jpg" alt="Le Café Noir survey QR code" class="qr-code" />
+              </div>
+              <p class="survey-copy">Your feedback helps us improve and deliver the best coffee and pastry experience at Le Café Noir.</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="section-banner">WHERE EVERY CUP IS SERVED WITH GOLDEN HOSPITALITY</div>
+        <div class="visit-card footer-visit-card">
+          <div class="visit-title">Manila Hotel, Ermita, Manila</div>
+          <div class="visit-hours">Weekdays: 8:00 am to 12:00 Midnight</div>
+          <div class="visit-hours">Weekends: 8:00 to 2:00 Midnight</div>
+        </div>
+      </main>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <aside class="cart-drawer" id="cart-drawer" aria-label="Your order" aria-hidden="true">
+      <div class="drawer-header">
+        <div>
+          <div class="drawer-kicker">ORDER SUMMARY</div>
+          <h2>Your order <span id="drawer-item-count">(0)</span></h2>
+        </div>
+        <button class="close-button" id="close-cart" aria-label="Close order">×</button>
+      </div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="empty-cart" id="empty-cart">
+        <span class="empty-icon">☕</span>
+        <h3>Your cart is empty.</h3>
+        <p>Add your favorite café treat and let the day begin.</p>
+        <button class="cta-button" id="browse-menu">Explore the menu</button>
+      </div>
+      <div class="cart-summary" id="cart-summary" hidden>
+        <div class="subtotal-row">
+          <span>Subtotal</span>
+          <b id="subtotal">₱0.00</b>
+        </div>
+        <button class="cta-button full" id="checkout-button">Continue to checkout</button>
+      </div>
+    </aside>
+
+    <div class="checkout-modal" id="checkout-modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <button class="close-button modal-close" id="close-checkout" aria-label="Close checkout">×</button>
+      <div class="drawer-kicker">ALMOST THERE</div>
+      <h2>Let's make it <em>yours.</em></h2>
+      <form id="checkout-form">
+        <label for="customer-name">Your name</label>
+        <input id="customer-name" name="name" placeholder="Enter your name" required />
+
+        <label for="customer-email">Email address</label>
+        <input id="customer-email" name="email" type="email" placeholder="you@example.com" required />
+
+        <label for="customer-phone">Phone number</label>
+        <input id="customer-phone" name="phone" type="tel" placeholder="09XX XXX XXXX" required />
+
+        <label for="customer-room">Room number</label>
+        <input id="customer-room" name="room" type="text" placeholder="Room number or unit" required />
+
+        <label for="pickup-time">Pickup time</label>
+        <select id="pickup-time" name="pickup" required>
+          <option value="">Choose a pickup time</option>
+          <option>As soon as possible</option>
+          <option>In 30 minutes</option>
+          <option>In 45 minutes</option>
+          <option>In 1 hour</option>
+        </select>
+
+        <div class="checkout-total">
+          <span>Your total</span>
+          <b id="checkout-total">₱0.00</b>
+        </div>
+
+        <button class="cta-button full" type="submit">Place pickup order</button>
+      </form>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
